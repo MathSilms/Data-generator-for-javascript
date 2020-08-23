@@ -1,6 +1,6 @@
 
 exports.up = function(knex) {
-    knex.schema.createTable('good_user', function(t){
+    return knex.schema.createTable('good_user', function(t){
         t.string('individamento');
         t.string('poupança');
         t.string('liquidez');
@@ -14,6 +14,6 @@ exports.up = function(knex) {
   };
   
   exports.down = function(knex) {
-      knex.schema.dropTable('good_user');
+    return knex.schema.dropTable('good_user');
   };
   

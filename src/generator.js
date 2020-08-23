@@ -1,6 +1,16 @@
-function getRandomArbitrary(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
+import faker from 'faker'
+import { cpfGenerator, getRandomArbitrary } from './Functions'
+
+
+
+  const name = faker.name.findName()
+  console.log(name);
+
+  const age = getRandomArbitrary(25,89)+' anos';
+  console.log(age);
+
+  const cfp  = cpfGenerator()
+  console.log(cfp);
 
 
   const individamento = getRandomArbitrary(70,100).toString()+'%';
