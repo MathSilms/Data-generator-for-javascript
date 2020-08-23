@@ -6,13 +6,17 @@
   "dependencies": {
     "faker": "^4.1.0",
     "knex": "^0.21.5",
+    "pg": "^8.3.2",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.4",
     "sqlite3": "^5.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4",
+    "sequelize-cli": "^6.2.0",
     "sucrase": "^3.15.0"
   },
   "scripts": {
-    "dev": "sucrase-node src/generator.js"
+    "d": "sucrase-node src/generator.js"
   }
 }

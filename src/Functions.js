@@ -10,7 +10,7 @@ function mod(dividendo,divisor) {
 }
 
 export function cpfGenerator() {
-   const comPontos = true; // TRUE para ativar e FALSE para desativar a pontuação.
+   const comPontos = false; // TRUE para ativar e FALSE para desativar a pontuação.
   
     const n = 9;
     const n1 = randomiza(n);

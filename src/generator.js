@@ -1,35 +1,36 @@
-import faker from 'faker'
 import { cpfGenerator, getRandomArbitrary } from './Functions'
+//import connection from './database/connection'
+let array = []
+let passos = 0
 
+function generateAndInsert(){
 
+    const cpf  = "cpf: "+cpfGenerator()+',';
+    console.log(cpf);
 
-  const name = faker.name.findName()
-  console.log(name);
+    const age = "age: "+getRandomArbitrary(25,89)+',';
+    console.log(age);
 
-  const age = getRandomArbitrary(25,89)+' anos';
-  console.log(age);
+    const individamento = "individamento: "+getRandomArbitrary(20,70)+',';
+    console.log(individamento)
 
-  const cfp  = cpfGenerator()
-  console.log(cfp);
+    const poupança = "poupança: "+getRandomArbitrary(10,20)+',';
+    console.log(poupança)
 
+    const liquidez = "liquidez: "+getRandomArbitrary(60,80)+',';
+    console.log(liquidez) 
+    
+    const cobertura = "cobertura: "+getRandomArbitrary(30,45)+',';
+    console.log(cobertura)  
+    
+    const riqueza = "riqueza: "+getRandomArbitrary(0.3,0.5)+',';
+    console.log(riqueza) 
+    
+    const score = "score: "+getRandomArbitrary(500,700)+',';
+    console.log(score)  
+    
+    const tempo_serviço = "tempo_serviço: "+getRandomArbitrary(1,15);
+    console.log(tempo_serviço)
+}
 
-  const individamento = getRandomArbitrary(70,100).toString()+'%';
-  console.log(individamento)
-
-  const poupança = getRandomArbitrary(1,10).toString()+'%';
-  console.log(poupança)
-
-  const liquidez = getRandomArbitrary(80,100).toString()+'%';
-  console.log(liquidez) 
-  
-  const Cobertura = getRandomArbitrary(2,30).toString()+' dias';
-  console.log(Cobertura)  
-  
-  const Riqueza = getRandomArbitrary(0.1,0.2).toString();
-  console.log(Riqueza) 
-  
-  const Score = getRandomArbitrary(100,450).toString();
-  console.log(Score)  
-  
-  const tempo_serviço = getRandomArbitrary(1,12).toString()+' meses';
-  console.log(tempo_serviço)
+generateAndInsert()
