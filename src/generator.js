@@ -1,9 +1,11 @@
 import { cpfGenerator, getRandomArbitrary } from './Functions'
-//import connection from './database/connection'
-let array = []
-let passos = 0
+import connection from './database/connection';
+import Faker from 'faker'
 
-function generateAndInsert(){
+async function generateAndInsert(){
+
+    const name = Faker.name.findName();
+    console.log(name);
 
     const cpf  = "cpf: "+cpfGenerator()+',';
     console.log(cpf);
@@ -31,6 +33,19 @@ function generateAndInsert(){
     
     const tempo_serviço = "tempo_serviço: "+getRandomArbitrary(1,15);
     console.log(tempo_serviço)
+
+    connection('inadimplente_user').insert({
+        name,
+        cpf,
+        age,
+        individamento,
+        poupança,
+        liquidez,
+        cobertura,
+        riqueza,
+        score,
+        tempo_serviço
+    })
 }
 
 generateAndInsert()
