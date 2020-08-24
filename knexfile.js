@@ -5,7 +5,7 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './src/database/dev.sql'
+      filename: './src/database/dev.sqlite'
     },
     migrations:{
       directory:'./src/database/migrations'
@@ -17,7 +17,7 @@ module.exports = {
     client: 'pg',
   version: '7.2',
   connection: {
-    host : '127.0.0.1',
+    host : 'localhost',
     user : 'postgres',
     password : 'docker',
     database : 'genData'
